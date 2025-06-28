@@ -1,24 +1,285 @@
-<!-- 
-HTML Template for Missions, delete and replace with mission HTML
--->
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Gnius Club</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook Sesión 16: DfAM Generativo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-  <h1>
-    Playbook HTML Placeholder Template
-  </h1>
-  <p>
-    Replace with actual playbook code.
-  </p>
-  <script src="script.js"></script>
-</body>
 
+    <header>
+        <h1><span class="book-icon">📋</span> <strong>Playbook Sesión 16: DfAM Generativo</strong></h1>
+        <div class="header-widgets">
+            <div class="timer-container">
+                <span id="timer">⏱️ 00:00</span>
+                <button id="startStop">Start</button>
+                <button id="reset">Reset</button>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle-input">
+                    <span class="slider round"></span>
+                </label>
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="activity-list">
+            <h2>Actividades</h2>
+            <ul>
+                <li><a href="#activity-0">📝</a></li>
+                <li><a href="#activity-1">1</a></li>
+                <li><a href="#activity-2">2</a></li>
+                <li><a href="#activity-3">3</a></li>
+                <li><a href="#activity-4">4</a></li>
+                <li><a href="#activity-5">5</a></li>
+            </ul>
+
+            <div class="sidebar-info">
+                <p>💡 Cada actividad está cuidadosamente diseñada para involucrar a los estudiantes.</p>
+                <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
+            </div>
+        </aside>
+
+        <main class="content">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+
+            <button id="toggle-dialogues">Mostrar todos los diálogos</button>
+
+            <!-- SECCIÓN "DE UN VISTAZO" (ANTES ACTIVITY-0) -->
+            <div class="activity-card" id="activity-0">
+                <h2><span class="book-icon">📝</span> De un Vistazo: Sesión Gnius</h2>
+                <p class="overview-subtitle">Resumen rápido de objetivos, materiales y preparación para el facilitador.</p>
+                <div class="overview-table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 50%;">Objetivos, Tácticas y Entregable</th>
+                                <th style="width: 50%;">Materiales Específicos y Preparación Previa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>Objetivos:</strong>
+                                    <ul>
+                                        <li>Que los estudiantes exploren la relación simbiótica entre el Diseño Generativo y el DfAM.</li>
+                                        <li>Que comprendan por qué las estructuras generadas por IA están inherentemente optimizadas para la impresión 3D.</li>
+                                        <li>Que apliquen esta comprensión para realizar un rediseño conceptual más profundo de una pieza de su proyecto.</li>
+                                    </ul>
+                                    <strong>Secuencia de Clase:</strong>
+                                    <ul>
+                                        <li><strong class="tactic-highlight">⚡Saludo Interactivo con IA:</strong> Activación y contextualización de la misión.</li>
+                                        <li><strong class="tactic-highlight">⚡"I Can Statement" + Desafío:</strong> Clarificación de objetivos y presentación del reto del día.</li>
+                                        <li><strong class="tactic-highlight">⚡AI GYM:</strong> Diálogo estratégico con Xolo para la conceptualización.</li>
+                                        <li><strong class="tactic-highlight">⚡Brain Spark:</strong> Ejecución técnica y práctica aumentada por la Dupla Dinámica.</li>
+                                        <li><strong class="tactic-highlight">⚡Gnius STORM:</strong> Showcase de prototipos, síntesis y reflexión.</li>
+                                    </ul>
+                                    <strong>Entregable Clave:</strong>
+                                    <ul>
+                                        <li>Un nuevo boceto detallado de una pieza clave de su mecanismo, rediseñada conceptualmente aplicando los principios visuales del diseño generativo.</li>
+                                        <li>Una nota en su documento de diseño que justifica el rediseño y su optimización inherente para la fabricación aditiva.</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <strong>Materiales Específicos:</strong>
+                                    <ul>
+                                        <li>Proyector o pantalla interactiva.</li>
+                                        <li>Conexión a internet estable.</li>
+                                        <li>Chat "Agente Gnius" (Xolo) activo y funcionando.</li>
+                                        <li>Papel y lápices para bocetar.</li>
+                                        <li>Documentos de diseño de los estudiantes del Módulo 2.</li>
+                                        <li>Presentación de diapositivas (Diapositivas 1-10).</li>
+                                    </ul>
+                                    <strong>Preparación Previa para ESTA Sesión:</strong>
+                                    <ol>
+                                        <li><strong>Revisión de Misión (Interna):</strong>
+                                            <ul>
+                                                <li>Asegurar que Xolo está operativo y tener listas las imágenes comparativas para el AI GYM.</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Familiarización:</strong> La sesión es puramente conceptual. Asegúrese de entender bien la relación simbiótica entre Diseño Generativo y DfAM para guiar la discusión.</li>
+                                        <li><strong>Preparación de Ejemplos:</strong> Tener listas las imágenes comparativas (soporte de satélite, chasis de coche) que se mencionan en la escaleta.</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- FIN DE LA SECCIÓN "DE UN VISTAZO" -->
+
+            <div class="activity-card" id="activity-1">
+                <h2>⚡ Actividad 1: Saludo de IA y Contexto ⏰ 3 minutos</h2>
+                <p>Introducir la sesión como la convergencia de dos caminos explorados: Diseño Generativo y DfAM.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: Bienvenida y Contexto de la Misión ⏰ 1 minuto</h3>
+                            <p>(Proyectar Diapositiva 2) El facilitador presenta la sesión como la síntesis de dos conceptos poderosos.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Saludos. Hemos recorrido dos caminos paralelos: el Diseño Generativo, donde la IA esculpe piezas eficientes, y el DfAM, donde ustedes optimizan diseños para la impresión. Hoy, esos dos caminos convergen. Descubrirán que el Diseño Generativo es la forma más avanzada de DfAM. Es diseñar, desde el principio, en el lenguaje nativo de la impresión 3D.</p>
+                            </div>
+                        </div>
+                    </div>
+                      <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 2: Activación de la IA ⏰ 2 minutos</h3>
+                            <p>El facilitador guía a los alumnos para que inicien su sesión de trabajo con Xolo.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Inicien su sesión con Xolo como de costumbre: 'Hola Xolo, listo para la Misión 16', seguido de su nombre, perfil y gustos. Esperen su confirmación.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-2">
+                <h2>⚡ Actividad 2: "I Can Statement" y Presentación del Desafío ⏰ 5 minutos</h2>
+                <p>Presentar el desafío puramente conceptual de conectar el Diseño Generativo con los desafíos de la impresión 3D.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: La Conexión y la Síntesis ⏰ 3 minutos</h3>
+                            <p>(Proyectar Diapositiva 3) El facilitador plantea por qué las piezas generadas por IA son 'extrañas' y cómo eso se conecta con la impresión 3D.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Recuerden la pieza optimizada de la Misión 10. Parecía extraña, casi imposible de fabricar con métodos tradicionales. ¿Por qué? Porque la IA estaba 'pensando' en la fabricación aditiva. La impresión 3D es la única tecnología que puede construir esas geometrías. La misión de hoy es puramente conceptual y de síntesis. Conectaremos los principios del Diseño Generativo con los desafíos de la impresión 3D para entender su relación simbiótica.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 2: Declaración del "I Can Statement" ⏰ 2 minutos</h3>
+                            <p>(Proyectar Diapositiva 4) El facilitador presenta el objetivo de aprendizaje de la sesión.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">El objetivo de hoy es de alto nivel conceptual. Al final, podrán decir: <strong>'Yo puedo explicar la relación simbiótica entre el Diseño Generativo y la Fabricación Aditiva y entiendo por qué las estructuras generadas por IA son un ejemplo avanzado de DfAM.'</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-3">
+                <h2>⚡ Actividad 3: A.I. GYM (La Relación entre DfAM y Diseño Generativo) ⏰ 15 minutos</h2>
+                <p>Fase de diálogo conceptual con Xolo para entender la historia, la revolución y la convergencia de estas dos tecnologías.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: Historia, Revolución y Convergencia ⏰ 8 minutos</h3>
+                            <p>(Proyectar Diapositiva 5) Los estudiantes consultan a Xolo sobre la evolución histórica que llevó a la simbiosis actual.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Entremos al A.I. GYM. Hoy Xolo actúa como historiador y analista de tecnología. Para entender la conexión, consúltenle: <strong>'Xolo, explícame la relación histórica entre el diseño limitado por la fabricación, la revolución de la impresión 3D y la convergencia con el Diseño Generativo.'</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 2: Análisis de Caso ⏰ 7 minutos</h3>
+                            <p>(Proyectar Diapositiva 6) El facilitador muestra casos reales y verbaliza el análisis de Xolo sobre cómo la IA resuelve el DfAM.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Veamos un caso práctico. (Muestra las imágenes comparativas del soporte de satélite o chasis). La versión tradicional es pesada, de bloques sólidos. La versión generativa es un 40% más ligera, igual de fuerte y solo se puede fabricar con impresión 3D. Como explica Xolo, el Diseño Generativo resuelve el DfAM automáticamente: sus formas orgánicas suelen ser auto-soportantes y usan solo el material estrictamente necesario. La IA rediseña la pieza y el proceso de fabricación al mismo tiempo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-4">
+                 <h2>⚡ Actividad 4: Brain Spark (Rediseño Conceptual Generativo) ⏰ 17 minutos</h2>
+                <p>Fase de trabajo práctico donde los estudiantes aplican su nueva comprensión para un rediseño conceptual más profundo.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: Aplicación del Pensamiento Generativo y Documentación ⏰ 17 minutos</h3>
+                            <p>(Proyectar Diapositiva 7) Los estudiantes vuelven a su proyecto, definen las restricciones para la IA y crean un boceto generativo más detallado.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Ahora, al Brain Spark. Vuelvan a su proyecto de mecanismo del Módulo 2. En la Misión 6, identificaron una pieza para optimizar. Ahora, harán un rediseño conceptual más profundo. Dialoguen con Xolo: **'Quiero definir las restricciones de mi [nombre de la pieza] para un rediseño generativo.'** Definan los puntos de anclaje, los de carga y los espacios prohibidos. Luego, hagan un nuevo boceto detallado de esa pieza, aplicando de forma rigurosa los principios del diseño generativo. Finalmente, añadan una nota en su brief justificando el rediseño.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-5">
+                <h2>⚡ Actividad 5: Gnius STORM (Cierre de Sesión) ⏰ 5 minutos</h2>
+                <p>Fase final de "Showcase de Bocetos Generativos" y discusión sobre el futuro del diseño.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: Think (Reflexión Individual) ⏰ 1 minuto</h3>
+                            <p>(Proyectar Diapositiva 8) El facilitador guía una reflexión sobre el cambio de paradigma en el diseño.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">
+                                     Tiempo. Observen su nuevo boceto generativo. Reflexionen: <strong>¿Cómo el pensar directamente en "lenguaje generativo" cambia su enfoque del diseño? ¿Es el Diseño Generativo el 'futuro' de todo el diseño?</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 2: Pair (Discusión en Parejas) ⏰ 2 minutos</h3>
+                            <p>Los estudiantes comparten sus bocetos y discuten sobre el futuro del diseño.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">
+                                    En parejas, compartan sus bocetos. Expliquen cómo aplicaron los principios generativos. Discutan sus reflexiones: ¿en qué casos un diseño tradicional sigue siendo mejor?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 3: Share (Síntesis y Cierre) ⏰ 2 minutos</h3>
+                            <p>(Proyectar Diapositiva 9) El facilitador consolida la sesión, destacando el nivel de síntesis alcanzado.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">
+                                    Han completado un círculo de conocimiento muy importante. Han entendido que las nuevas herramientas de diseño (IA) y de fabricación (Impresión 3D) no son tecnologías separadas; co-evolucionan y se potencian mutuamente. Ser un diseñador de vanguardia hoy en día significa dominar no solo las herramientas, sino la sinergia entre ellas. Han demostrado que pueden pensar en ese nivel de síntesis.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
