@@ -6,7 +6,7 @@
     <title>Playbook-S1-TM16</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   </head>
+<link rel="stylesheet" href="style.css"></head>
 <body>
     <header>
         <h1><span class="book-icon">📋</span> <strong>Playbook: Misión 16 - 1o de Secundaria</strong></h1>
@@ -430,52 +430,6 @@
             </div>
         </main>
     </div>
-    <script>
-        // Funcionalidad básica de timers y colapsables
-        document.querySelectorAll('.collapsible-button').forEach(button => {
-            button.addEventListener('click', () => {
-                const content = button.nextElementSibling;
-                content.style.display = content.style.display === 'block' ? 'none' : 'block';
-            });
-        });
-
-        function copyPrompt(id) {
-            const text = document.getElementById(id).innerText;
-            navigator.clipboard.writeText(text).then(() => {
-                alert('Prompt copiado al portapapeles');
-            });
-        }
-
-        // Timer global
-        let timeLeft = 2400;
-        let timerId = null;
-        const timerDisplay = document.getElementById('global-timer');
-        const startStopBtn = document.getElementById('global-start-stop');
-
-        startStopBtn.addEventListener('click', () => {
-            if (timerId) {
-                clearInterval(timerId);
-                timerId = null;
-                startStopBtn.textContent = 'Start';
-            } else {
-                timerId = setInterval(() => {
-                    timeLeft--;
-                    const mins = Math.floor(timeLeft / 60);
-                    const secs = timeLeft % 60;
-                    timerDisplay.textContent = `⏱️ ${mins}:${secs < 10 ? '0' : ''}${secs}`;
-                    if (timeLeft <= 0) clearInterval(timerId);
-                }, 1000);
-                startStopBtn.textContent = 'Stop';
-            }
-        });
-
-        document.getElementById('global-reset').addEventListener('click', () => {
-            clearInterval(timerId);
-            timerId = null;
-            timeLeft = 2400;
-            timerDisplay.textContent = '⏱️ 40:00';
-            startStopBtn.textContent = 'Start';
-        });
     <script src="script.js"></script>
-</body>
+    </body>
 </html></html>
