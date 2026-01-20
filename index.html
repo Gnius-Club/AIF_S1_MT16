@@ -17,6 +17,15 @@
                 <button id="global-start-stop">Start</button>
                 <button id="global-reset">Reset</button>
             </div>
+            <!-- Estructura del Theme Toggle agregada -->
+            <div class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle-input">
+                    <span class="slider round"></span>
+                </label>
+                <i class="fas fa-moon"></i>
+            </div>
         </div>
     </header>
     <div class="main-container">
@@ -49,6 +58,7 @@
                 <div class="command-section xolo-prompt">
                     <h3>🤖 Prompt de Referencia para XOLO (Solo para Maestro)</h3>
                     <div class="prompt-box">
+                        <!-- Estructura de botón de copiado agregada -->
                         <div class="prompt-header">
                             <span class="prompt-label">⚠️ NOTA: XOLO ya conoce el tema de esta misión. Este prompt es SOLO de referencia en caso de emergencia técnica:</span>
                             <button class="copy-btn" onclick="copyPrompt('main-prompt')">
@@ -433,4 +443,4 @@
     </div>
 <script src="script.js"></script>
 </body>
-</html></html>
+</html>
